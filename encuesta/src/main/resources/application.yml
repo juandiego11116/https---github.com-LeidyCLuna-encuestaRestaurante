@@ -1,0 +1,28 @@
+server:
+  error:
+    include-message: always
+  port: 9000
+
+spring:
+  profiles:
+    active: dev
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      minimum-idle: 10
+      maximum-pool-size: 10
+      max-lifetime: 1800000
+      connection-timeout: 60000
+      pool-name: "encuesta-hikari-pool"
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+        currentSessionContextClass: org.springframework.orm.hibernate5.SpringSessionContext
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    show-sql: true
+  jackson:
+    time-zone: America/Bogota
+    date-format: yyyy-MM-dd hh:mm:ss a

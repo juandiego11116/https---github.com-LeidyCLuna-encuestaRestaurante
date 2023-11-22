@@ -1,0 +1,5 @@
+spring:
+  datasource:
+    password: 12345678
+    username: root
+    url: jdbc:mysql://127.0.0.1:3306/encuesta_restaurante?characterEncoding=utf8&serverTimezone=UTC&useSSL=false
