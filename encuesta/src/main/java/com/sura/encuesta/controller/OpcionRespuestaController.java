@@ -26,7 +26,7 @@ public class OpcionRespuestaController {
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "ok. se guardo correctamente la opcion de respuesta", response = OpcionRespuestaDTO.class),
             @ApiResponse(code = 400, message = "no llenaste los datos correctamente", response = String.class),
-            @ApiResponse(code = 500, message = "error inesperado del sistema")
+            @ApiResponse(code = 500, message = "error inesperado del sistema de encuestas")
     })
 
     @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
